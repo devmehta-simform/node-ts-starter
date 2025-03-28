@@ -7,7 +7,7 @@
     "dev": "npx nodemon",
     "format": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky",
+    "prepare": "husky install && cp .husky.tmp/* .husky/_/ ",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
@@ -27,6 +27,7 @@
     "@types/node": "^22.13.14",
     "@typescript-eslint/eslint-plugin": "^8.28.0",
     "@typescript-eslint/parser": "^8.28.0",
+    "eslint-plugin-prettier": "^5.2.5",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "globals": "^16.0.0",
