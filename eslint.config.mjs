@@ -2,7 +2,6 @@ import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
-
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default defineConfig([
@@ -19,4 +18,14 @@ export default defineConfig([
   tseslint.configs.recommended,
   { ignores: ['node_modules/*'] },
   eslintPluginPrettierRecommended,
+  {
+    rules: {
+      'no-unused-vars': [
+        'warn',
+        {
+          argsIgnorePattern: '*',
+        },
+      ],
+    },
+  },
 ]);
